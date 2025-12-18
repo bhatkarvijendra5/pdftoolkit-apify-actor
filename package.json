@@ -2,7 +2,12 @@
 {
   "name": "pdftoolkit-apify-actor",
   "version": "1.0.0",
+  "description": "PDF Toolkit Apify Actor",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
   "dependencies": {
-    "apify": "^3.0.0"
+    "apify": "^3.1.10"
   }
 }
