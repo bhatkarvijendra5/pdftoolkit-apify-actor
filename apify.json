@@ -1,6 +1,8 @@
 
 {
-  "name": "pdftoolkit",
-  "version": "1.0",
+  "name": "pdftoolkit-apify-actor",
+  "version": "0.0",
+  "buildTag": "latest",
+  "env": {},
   "main": "main.js"
 }
