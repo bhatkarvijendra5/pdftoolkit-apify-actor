@@ -1,8 +1,6 @@
 
-import { Actor } from 'apify';
+const { Actor } = require('apify');
 
-await Actor.init();
-
-console.log('✅ PDF Toolkit Actor is running');
-
-await Actor.exit();
+Actor.main(async () => {
+    console.log('✅ PDF Toolkit Actor started successfully');
+});
