@@ -1,6 +1,11 @@
 
-const { Actor } = require('apify');
+const Apify = require('apify');
 
-Actor.main(async () => {
+Apify.main(async () => {
     console.log('✅ PDF Toolkit Actor started successfully');
+
+    // Keep actor alive briefly (for testing)
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    console.log('✅ Actor finished');
 });
