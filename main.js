@@ -1,17 +1,14 @@
+const { Actor } = require('apify');
 
-import { Actor } from 'apify';
+Actor.main(async () => {
+    console.log('🚀 Actor started successfully');
 
-await Actor.init();
+    const input = await Actor.getInput();
+    console.log('📥 Input:', input);
 
-console.log('🚀 Actor started');
+    await Actor.setValue('OUTPUT', {
+        status: 'Actor is running correctly'
+    });
 
-const input = await Actor.getInput();
-console.log('📥 Input:', input);
-
-await Actor.setValue('OUTPUT', {
-    status: 'Actor is working correctly'
+    console.log('✅ Actor finished successfully');
 });
-
-console.log('✅ Actor finished');
-
-await Actor.exit();
