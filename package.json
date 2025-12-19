@@ -3,17 +3,11 @@
   "name": "pdftoolkit-apify-actor",
   "version": "1.0.0",
   "description": "Apify actor for PDF processing",
-  "main": "main.js",
   "dependencies": {
-    "apify": "^3.0.0"
+    "apify": "^3.1.1"
   },
   "scripts": {
     "start": "node main.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bhatkarvijendra5/pdftoolkit-apify-actor.git"
-  },
-  "keywords": ["apify", "pdf", "actor"],
-  "license": "ISC"
+  "type": "commonjs"
 }
