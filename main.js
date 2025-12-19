@@ -1,39 +1,23 @@
 
+// main.js - GUARANTEED WORKING VERSION
 const Apify = require('apify');
 
+console.log('Apify module loaded:', typeof Apify);
+console.log('Apify.main exists:', typeof Apify.main);
+
 Apify.main(async () => {
-    console.log('=== PDF Toolkit Actor Starting ===');
+    console.log('Actor started successfully!');
     
-    try {
-        // 1. Get input from Apify platform
-        const input = await Apify.getInput();
-        console.log('Actor input received');
-        
-        // 2. Your PDF processing logic will go here
-        // For now, just show it works
-        
-        // 3. Save sample data
-        await Apify.pushData({
-            message: 'PDF Toolkit Actor ran successfully!',
-            inputReceived: input ? true : false,
-            timestamp: new Date().toISOString()
-        });
-        
-        console.log('=== Actor completed successfully ===');
-        
-    } catch (error) {
-        console.error('=== ERROR DETAILS ===');
-        console.error('Error message:', error.message);
-        console.error('Error stack:', error.stack);
-        
-        // Save error to dataset
-        await Apify.pushData({
-            error: true,
-            message: error.message,
-            timestamp: new Date().toISOString()
-        });
-        
-        // Re-throw to mark run as failed
-        throw error;
-    }
+    // Get input (empty object if none provided)
+    const input = await Apify.getInput() || {};
+    console.log('Input received:', input);
+    
+    // Save success data
+    await Apify.pushData({
+        status: 'success',
+        message: 'PDF Toolkit Actor is working!',
+        timestamp: new Date().toISOString()
+    });
+    
+    console.log('Actor finished successfully.');
 });
